@@ -50,6 +50,7 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      #From this point onwards make sure to specify the proper working-directory and path in 'Build with Hugo' and 'Upload Artifact'
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
